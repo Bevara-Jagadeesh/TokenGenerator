@@ -1,6 +1,12 @@
-import logo from './logo.svg';
+import Home from './home';
 import './App.css';
 import FHIR from 'fhirclient';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
 
 function App() {
   const GetTokenCode = () => {
@@ -17,16 +23,17 @@ function App() {
       console.log(" code   ", code);     
   }
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-        <button onClick={GetTokenCode}>Get Token</button>
-      </header>
     </div>
+    <Routes>
+                 <Route exact path='/home' element={< Home />}></Route>
+                 {/* <Route exact path='/about' element={< About />}></Route>
+                 <Route exact path='/contact' element={< Contact />}></Route> */}
+    </Routes>
+   </Router>
+   
+    
   );
 }
 
