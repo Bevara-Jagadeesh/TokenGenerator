@@ -11,7 +11,7 @@ import {
 function App() {
   // const GetTokenCode = () => {
   //   console.log(FHIR);
-    var code = FHIR.oauth2.authorize({
+    FHIR.oauth2.authorize({
                  clientId: "3dce1300-ce75-4fd3-81a4-561618f4aa6f",
                  scope: "patient/Patient.read patient/Observation.read launch online_access openid profile",
                  iss:"https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d",
