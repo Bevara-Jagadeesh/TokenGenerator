@@ -16,7 +16,7 @@ function App() {
                  scope: "patient/Patient.read patient/Observation.read launch online_access openid profile",
                  iss:"https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d",
    // <!--              patientId:"12724065",-->
-                 redirectUri: "http://10.10.13.14:8000",
+                 redirectUri: "http://10.10.13.14:8000/home",
                  launch:"a7b726f7-ea3c-4ad7-bef4-4eab4b3b0857",
                  response_type:"code"
                });
